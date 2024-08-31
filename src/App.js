@@ -10,7 +10,9 @@ function App() {
       <Navbar />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Main_page/>} />
+          <Route path="/" element={<Main_page/>}>
+            <Route index element={<Main_page/>} />
+          </Route>
           <Route path="*" element={ <Error404/> } />
         </Routes>
       </BrowserRouter>
